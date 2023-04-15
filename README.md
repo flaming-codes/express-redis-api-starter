@@ -13,6 +13,8 @@
 
 This is a quickstart for a NodeJS / Express.js / TypeScript / Redis / Lando project. It is intended to be used as a starting point for new small projects that want to quickly get up and running with a basic API to access a Redis database.
 
+It exposes a single endpoint (`/v1/page/[slug]/count`) to INCR a counter for a given slug, By default, the count expires after 4 hours. The API therefore enables simple trending statistics for your pages.
+
 It uses _Lando_ to provide a local development environment that can be started with a single command, `lando start`.
 
 _Express.js_ is used with _TypeScript_ and a file-based routing system. This means that you can add new routes by simply adding a new file to the `src/routes` directory. The file name will be used as the route name, and the file contents will be used as the route handler - similar to popular frameworks like _Next.js_.
@@ -58,7 +60,13 @@ Currently using Node.js 19. Update the version of Node.js in the `.lando.yml` fi
 The API is available at the following URL thanks to Lando's built-in proxy:
 
 ```bash
-http://express-redis-api-starter.lndo.site:8000/
+http://express-redis-api-starter.lndo.site:8000/...
+```
+
+You can send a GET/POST/DELETE request to the following endpoint to increment the ephemeral counter for a `slug`:
+
+```bash
+http://express-redis-api-starter.lndo.site:8000/v1/page/[slug]/count
 ```
 
 > Run `lando info` to see the full list of URLs.
