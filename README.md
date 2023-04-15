@@ -11,13 +11,13 @@
 
 ## About
 
-This is a quickstart for a NodeJS / Express.js / TypeScript / Redis / Lando project. It is intended to be used as a starting point for new small projects that want to quickly get up and running with a basic API to access a Redis database.
+This is a NodeJS-based quickstart project that utilizes Express.js, TypeScript, Redis, and Lando. The repository aims to provide a starting point for small projects that require a simple API for accessing a Redis database.
 
-It exposes a single endpoint (`/v1/page/[slug]/count`) to INCR a counter for a given slug, By default, the count expires after 4 hours. The API therefore enables simple trending statistics for your pages.
+The API exposes a single endpoint (/v1/page/[slug]/count) that allows you to increment a counter for a specific slug. The count expires after 4 hours, making it ideal for generating basic trending statistics for your pages.
 
-It uses _Lando_ to provide a local development environment that can be started with a single command, `lando start`.
+The project uses Lando for easy local development, which can be started with a single command - 'lando start'. 
 
-_Express.js_ is used with _TypeScript_ and a file-based routing system. This means that you can add new routes by simply adding a new file to the `src/routes` directory. The file name will be used as the route name, and the file contents will be used as the route handler - similar to popular frameworks like _Next.js_.
+Express.js is implemented using TypeScript and a file-based routing system, which means that adding new routes is as simple as adding a new file to the src/routes directory. The file name is used as the route name, and the file contents serve as the route handler - similar to popular frameworks like Next.js.
 
 ## Getting Started
 
