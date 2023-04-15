@@ -1,0 +1,8 @@
+# Configs
+.env
+
+# Node.js
+node_modules
+
+# Misc
+.DS_Store

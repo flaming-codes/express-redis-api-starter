@@ -1,0 +1,22 @@
+name: express-redis-api-starter
+
+env_file:
+  - lando.env
+
+services:
+  api:
+    type: node:19
+    build:
+      - npm i
+    command: npm run dev
+    globals: []
+    port: 8181
+    ssl: false
+  redis:
+    type: redis:7
+    persist: false
+    portforward: 6379
+
+proxy:
+  api:
+    - express-redis-api-starter.lndo.site:8181
