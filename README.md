@@ -2,11 +2,12 @@
 
 ## Overview
 
-- Express.js w/ Typescript
-- File-based routing for Express.js
-- `ts-node` for dev & production, no explicit compilation required
-- Lando for easy local development environment
-- Redis for data storage
+- 🚀 Express.js w/ Typescript
+- 📁 File-based routing for Express.js
+- 🔍 `ts-node` for dev & production, no explicit compilation required
+- 🐳 Lando for easy local development environment
+- 🗄️ Redis for data storage
+
 
 ## About
 
